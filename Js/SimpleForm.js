@@ -26,3 +26,14 @@ email.addEventListener('input', function() {
         emailError.textContent = "Invalid Email";
     }
 });
+
+const phoneRegex = RegExp('^([1-9][0-9])[ ]{1}[1-9][0-9]{9}$');
+const telephone = document.querySelector('#tel');
+const telephoneError = document.querySelector('.tel-error');
+telephone.addEventListener('input', function() {
+    if (phoneRegex.test(telephone.value)) {
+        telephoneError.textContent = "";
+    } else {
+        telephoneError.textContent = "Invalid Telephone number";
+    }
+});
