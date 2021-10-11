@@ -37,3 +37,15 @@ telephone.addEventListener('input', function() {
         telephoneError.textContent = "Invalid Telephone number";
     }
 });
+
+
+const passwordRegex = RegExp('^[a-zA-Z0-9@#$%^&-+=()]{8,}$')
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input', function() {
+    if (passwordRegex.test(password.value)) {
+        passwordError.textContent = "";
+    } else {
+        passwordError.textContent = "PASSWORD Is Incorrect";
+    }
+});
