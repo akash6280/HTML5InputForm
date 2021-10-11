@@ -4,7 +4,7 @@ html,input{
 
 body{
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0px auto;
     padding: 2em;
 }
@@ -13,13 +13,15 @@ body{
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    background: tomato;
+    background: rgba(75, 27, 63, 0.274);
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 form{
     margin-top: 50px;
+    padding:20px;
+    background-color: lightblue;
 }
 
 div{
@@ -54,3 +56,24 @@ error-output{
     font-style: italic;
     color: red;
 } 
+
+
+@media only screen and (max-width:360px) {
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    label {
+        display: inline-block;
+        width: 100px;
+
+    }
+    .nativeDateTimePicker{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+        border: 1px solid black
+    }
+
+}
